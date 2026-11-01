@@ -139,7 +139,7 @@ body::before {
 .hero-photo {
   position: absolute;
   left: 50%;
-  top: 2%;
+  top: 9%;
   transform: translateX(-50%);
   width: clamp(210px, 29vw, 420px);
   height: clamp(260px, 34vw, 500px);
@@ -154,6 +154,7 @@ body::before {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 .hero-photo img {
   -webkit-mask-image: inherit;
@@ -767,7 +768,7 @@ body::before {
   .hero-col--right .hero-location { justify-content: flex-start; }
   .hero-col--right .hero-location-text { text-align: left; }
 
-  .hero-photo { width: 52vw; height: 62vw; top: 4%; }
+  .hero-photo { width: 52vw; height: 62vw; top: 9%; }
   .hero-flower--left { width: 60px; left: -20px; bottom: -10px; opacity: 0.6; }
   .hero-flower--right { width: 55px; right: -14px; top: 8%; opacity: 0.6; }
 
