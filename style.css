@@ -155,7 +155,10 @@ body::before {
   height: 100%;
   object-fit: cover;
 }
-.hero-photo img { -webkit-mask-image: inherit; }
+.hero-photo img {
+  -webkit-mask-image: inherit;
+  filter: brightness(0.85);
+}
 
 .hero-flower {
   position: absolute;
