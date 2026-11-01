@@ -100,7 +100,7 @@ const CONTENT = {
     ctaLink: 'https://t.me/dilovap',
     list: [
       { icon: 'telegram', label: '@dilovap', link: 'https://t.me/dilovap' },
-      { icon: 'instagram', label: '@d1lovap', link: 'https://instagram.com/d1lovap' },
+      { icon: 'instagram', label: '@mansurov.code', link: 'https://instagram.com/mansurov.code' },
       { icon: 'pin', label: 'Худжанд, Таджикистан', link: null }
     ]
   },
