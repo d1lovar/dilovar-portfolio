@@ -16,7 +16,7 @@ const CONTENT = {
       'ЗАПИСЫВАЮТСЯ САМИ'
     ],
     ctaText: 'ОТКРЫТ ДЛЯ ЗАКАЗОВ',
-    ctaLink: 'https://t.me/your_username',
+    ctaLink: 'https://t.me/dilovap',
     signature: 'Dilovar',
     paragraph: 'Привет! Я делаю красивые сайты для салонов красоты и барбершопов: с ценами, работами мастеров и онлайн-записью без переписки в директе.',
     location: ['ХУДЖАНД, ТАДЖИКИСТАН', 'РАБОТАЮ ОНЛАЙН']
@@ -33,7 +33,7 @@ const CONTENT = {
         subtitle: 'Сайт + онлайн-запись',
         tags: ['САЙТ', 'ЗАПИСЬ', 'МОБИЛЬНЫЙ'],
         image: 'images/project-1.jpg',
-        url: '#'
+        url: 'https://demo-sait.netlify.app/'
       },
       {
         number: '02',
@@ -41,7 +41,7 @@ const CONTENT = {
         subtitle: 'Лендинг с ценами',
         tags: ['ЛЕНДИНГ', 'ДИЗАЙН', 'ЗАПИСЬ'],
         image: 'images/project-2.jpg',
-        url: '#'
+        url: 'https://lola-beauty-home.vercel.app'
       },
       {
         number: '03',
@@ -49,7 +49,7 @@ const CONTENT = {
         subtitle: 'Сайт-визитка',
         tags: ['ВИЗИТКА', 'INSTAGRAM', 'ДИЗАЙН'],
         image: 'images/project-3.jpg',
-        url: '#'
+        url: 'https://fademade-tj.netlify.app/'
       }
     ]
   },
@@ -81,7 +81,7 @@ const CONTENT = {
     ]
   },
 
-  showTestimonials: true,
+  showTestimonials: false,
   testimonials: {
     title: 'ОТЗЫВЫ',
     items: [
@@ -97,10 +97,10 @@ const CONTENT = {
     subtitle: ['СЕЙЧАС ПРИНИМАЮ', 'НОВЫЕ ЗАКАЗЫ'],
     paragraph: 'Напишите — покажу, как может выглядеть сайт именно вашего салона',
     ctaText: 'НАПИСАТЬ МНЕ',
-    ctaLink: 'https://t.me/your_username',
+    ctaLink: 'https://t.me/dilovap',
     list: [
-      { icon: 'telegram', label: '@your_username', link: 'https://t.me/your_username' },
-      { icon: 'instagram', label: '@your_username', link: 'https://instagram.com/your_username' },
+      { icon: 'telegram', label: '@dilovap', link: 'https://t.me/dilovap' },
+      { icon: 'instagram', label: '@d1lovap', link: 'https://instagram.com/d1lovap' },
       { icon: 'pin', label: 'Худжанд, Таджикистан', link: null }
     ]
   },
@@ -114,7 +114,7 @@ const CONTENT = {
     flower1: 'images/flower-1.png',
     flower2: 'images/flower-2.png',
     flower3: 'images/flower-3.png',
-    contact: 'images/contact.jpg'
+    contact: 'images/me.png'
   }
 };
 
@@ -265,6 +265,10 @@ function renderProjects() {
   CONTENT.projects.items.forEach(item => {
     const card = el('a', 'project-card');
     card.href = item.url || '#';
+    if (item.url && item.url !== '#') {
+      card.target = '_blank';
+      card.rel = 'noopener';
+    }
 
     const head = el('div', 'project-head');
     head.appendChild(el('span', 'project-number', item.number));
