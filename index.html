@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Диловар — веб-дизайнер | Сайты для салонов красоты и барбершопов</title>
+<meta name="description" content="Делаю сайты с онлайн-записью для салонов красоты и барбершопов в Худжанде.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Marck+Script&family=Jost:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="noiseFilter">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0"/>
+  </filter>
+</svg>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <span class="topbar-left"></span>
+    <span class="topbar-right"></span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-stage" id="heroStage">
+      <div class="hero-flower hero-flower--left" id="flowerLeft" aria-hidden="true"></div>
+      <h1 class="hero-word" id="heroWord" aria-label="Portfolio"></h1>
+      <div class="hero-photo" id="heroPhoto" aria-hidden="true"></div>
+      <div class="hero-flower hero-flower--right" id="flowerRight" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-text-row">
+      <div class="hero-col hero-col--left">
+        <p class="hero-headline" id="heroHeadline"></p>
+        <a class="pill-btn pill-btn--hero" id="heroCta" href="#" target="_blank" rel="noopener">
+          <span id="heroCtaText"></span><span class="star">&#10022;</span>
+        </a>
+        <div class="hero-signature" id="heroSignature"></div>
+      </div>
+      <div class="hero-col hero-col--right">
+        <p class="hero-paragraph" id="heroParagraph"></p>
+        <div class="hero-location">
+          <div class="hero-location-text" id="heroLocation"></div>
+          <div class="globe-ring" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="panel-wrap">
+  <div class="container">
+    <div class="panel" id="panel">
+
+      <section class="cell projects-cell">
+        <div class="cell-header">
+          <h2 class="cell-title"><span class="star">&#10022;</span><span id="projectsTitle"></span></h2>
+          <a href="#" id="projectsViewAll" class="view-all"><span id="projectsViewAllText"></span><span class="view-arrow">&#10230;</span></a>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </section>
+
+      <div class="row-divider"></div>
+
+      <div class="row two-col">
+        <section class="cell process-cell">
+          <h2 class="cell-title"><span class="star">&#10022;</span><span id="processTitle"></span></h2>
+          <div class="process-body">
+            <ol class="process-steps" id="processSteps"></ol>
+            <div class="process-decor" aria-hidden="true">
+              <div class="arc"></div>
+              <div class="arc-flower" id="arcFlower"></div>
+              <p class="process-quote" id="processQuote"></p>
+            </div>
+          </div>
+        </section>
+
+        <div class="col-divider"></div>
+
+        <section class="cell services-cell">
+          <h2 class="cell-title"><span class="star">&#10022;</span><span id="servicesTitle"></span></h2>
+          <div class="services-grid" id="servicesGrid"></div>
+          <p class="services-footnote" id="servicesFootnote"></p>
+        </section>
+      </div>
+
+      <div class="row-divider" id="testimonialsDivider"></div>
+
+      <section class="cell testimonials-cell" id="testimonialsCell">
+        <h2 class="cell-title"><span class="star">&#10022;</span><span id="testimonialsTitle"></span></h2>
+        <div class="testimonials-grid" id="testimonialsGrid"></div>
+      </section>
+
+      <div class="row-divider"></div>
+
+      <section class="contact-row" id="contactRow">
+        <div class="cell contact-cell contact-cell--title">
+          <h2 class="contact-title" id="contactTitle"></h2>
+          <div class="contact-script" id="contactScript"></div>
+        </div>
+        <div class="col-divider"></div>
+        <div class="cell contact-cell contact-cell--cta">
+          <h3 class="contact-subtitle" id="contactSubtitle"></h3>
+          <p class="contact-paragraph" id="contactParagraph"></p>
+          <a href="#" id="contactCta" class="pill-btn">
+            <span id="contactCtaText"></span><span class="star">&#10022;</span>
+          </a>
+        </div>
+        <div class="col-divider"></div>
+        <div class="cell contact-cell contact-cell--list">
+          <ul class="contact-list" id="contactList"></ul>
+        </div>
+        <div class="col-divider"></div>
+        <div class="cell contact-cell contact-cell--photo">
+          <div class="contact-photo" id="contactPhoto" aria-hidden="true"></div>
+          <div class="contact-photo-flower" id="contactFlower" aria-hidden="true"></div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="star">&#10022;</span><span id="footerText"></span><span class="star">&#10022;</span>
+  </div>
+</footer>
+
+<a href="#" id="mobileCta" class="mobile-fixed-cta">
+  <span id="mobileCtaText">Написать в Telegram</span><span class="star">&#10022;</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
